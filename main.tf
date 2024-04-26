@@ -13,6 +13,10 @@ resource "aws_key_pair" "grp4-keypair" {
 
 resource "aws_vpc" "group-4" {
   cidr_block = var.vpc_cidr
+
+  tags = {
+    Name = var. vpc_name
+  }
 }
 
 resource "aws_subnet" "grp4-subnet-1" {

@@ -5,8 +5,9 @@
 ```hcl
 module "vpc" {
     source = "holmesgulnara/grp4project/aws"
-    version = "0.0.1"
+    version = "0.0.2"
     region = "us-east-2"
+    vpc_name = "Group4"
     vpc_cidr = "10.0.0.0/16"
     subnet1_cidr = "10.0.1.0/24"
     subnet2_cidr = "10.0.2.0/24"
@@ -38,8 +39,9 @@ ports = [
   { from_port = 443, to_port = 443 }               
 ]
 
-traffic_distribution = "split"
+traffic_distribution = "blue-90"
 enable_green_env = true
+
 }
 ```
 

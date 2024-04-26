@@ -3,6 +3,11 @@ variable region {
   description = "Provide region"
 }
 
+variable vpc_name {
+    type = string
+    description = "Provide vpc name"
+}
+
 variable vpc_cidr {
   type = string
   description = "Provide vpc cidr block"
